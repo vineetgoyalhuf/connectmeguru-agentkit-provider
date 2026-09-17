@@ -7,13 +7,13 @@
 
 Official **Coinbase AgentKit Action Provider** for [ConnectMeGuru](https://www.connectmeguru.com).
 
-Enables autonomous AI agents, on-chain smart wallets, and travel bots to programmatically search and purchase global travel eSIM data plans across 200+ countries with non-custodial **USDT settlements on Polygon, Arbitrum One, and TRON**.
+Enables autonomous AI agents, on-chain smart wallets, and travel bots to programmatically search and purchase global travel eSIM data plans across 190+ countries with non-custodial **USDT settlements on Polygon, Arbitrum One, and TRON**.
 
 ---
 
 ## 🌟 Why ConnectMeGuru for AI Agents?
 
-* 📶 **200+ Countries Covered**: Over 3,000+ local and regional travel eSIM plans.
+* 📶 **190+ Countries Covered**: Over 3,000+ local and regional travel eSIM plans.
 * 🤖 **100% Autonomous**: Standard **HTTP 402 Payment Required** invoice flow with collision-free spot discounts.
 * 🔐 **Machine Identity**: One-time email OTP verification issues a permanent Personal Access Token (`cmg_pat_...`) for zero-human runtime checkouts.
 * ⚡ **Instant Delivery**: QR code data URLs and SM-DP+ LPA activation strings returned directly in JSON responses upon on-chain block settlement.
