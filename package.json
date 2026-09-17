@@ -1,0 +1,44 @@
+{
+  "name": "connectmeguru-agentkit-provider",
+  "version": "1.0.0",
+  "description": "Coinbase AgentKit Action Provider for autonomous international travel eSIM purchasing with USDT on Polygon, Arbitrum, and TRON via ConnectMeGuru",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "coinbase",
+    "agentkit",
+    "cdp",
+    "ai-agent",
+    "autonomous-agent",
+    "esim",
+    "travel",
+    "crypto-commerce",
+    "polygon",
+    "arbitrum",
+    "tron",
+    "usdt",
+    "web3"
+  ],
+  "author": "ConnectMeGuru (https://www.connectmeguru.com)",
+  "license": "MIT",
+  "homepage": "https://www.connectmeguru.com/developers/agentic",
+  "dependencies": {
+    "zod": "^3.22.4"
+  },
+  "peerDependencies": {
+    "@coinbase/agentkit": ">=0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@coinbase/agentkit": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.3",
+    "typescript": "^5.4.5"
+  }
+}
