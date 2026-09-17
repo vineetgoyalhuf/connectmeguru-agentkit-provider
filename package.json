@@ -26,6 +26,15 @@
   "author": "ConnectMeGuru (https://www.connectmeguru.com)",
   "license": "MIT",
   "homepage": "https://www.connectmeguru.com/developers/agentic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vineetgoyalhuf/connectmeguru-agentkit-provider.git"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "zod": "^3.22.4"
   },
