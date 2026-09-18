@@ -11,9 +11,13 @@ export const PurchaseEsimSchema = z.object({
     .string()
     .describe('The unique packageCode of the desired eSIM plan (e.g., "P4XU0X3CX") returned from search'),
   network: z
-    .enum(['POLYGON', 'ARBITRUM', 'TRON'])
-    .default('POLYGON')
-    .describe('Blockchain network for the USDT payment transfer (POLYGON, ARBITRUM, or TRON)'),
+    .enum(['BASE', 'POLYGON', 'ARBITRUM', 'TRON'])
+    .default('BASE')
+    .describe('Blockchain network for the payment transfer (BASE, POLYGON, ARBITRUM, or TRON). Defaults to BASE.'),
+  currency: z
+    .enum(['USDC', 'USDT'])
+    .default('USDC')
+    .describe('Preferred cryptocurrency stablecoin for payment (USDC or USDT). Defaults to USDC.'),
   customerEmail: z
     .string()
     .email()

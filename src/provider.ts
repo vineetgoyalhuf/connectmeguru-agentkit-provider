@@ -111,7 +111,8 @@ export class ConnectMeGuruActionProvider {
       },
       body: JSON.stringify({
         packageCode: args.packageCode,
-        preferredNetwork: args.network || 'POLYGON',
+        preferredNetwork: args.network || 'BASE',
+        preferredCurrency: args.currency || 'USDC',
         customerEmail: args.customerEmail,
       }),
     });
@@ -122,17 +123,19 @@ export class ConnectMeGuruActionProvider {
     }
 
     const data: EsimInvoice = await res.json();
+    const tokenCurrency = data.payment.currency || args.currency || 'USDC';
     return JSON.stringify({
-      message: 'Payment Required: Transfer the exact USDT amount to the receiving address.',
+      message: `Payment Required: Transfer the exact ${tokenCurrency} amount to the receiving address.`,
       invoiceId: data.invoiceId,
+      currency: tokenCurrency,
       network: data.payment.network,
       contractAddress: data.payment.contractAddress,
       receivingAddress: data.payment.receivingAddress,
-      expectedAmountUsdt: data.payment.expectedAmount,
+      expectedAmount: data.payment.expectedAmount,
       spotDiscountOffset: data.payment.spotDiscountOffset,
       expiresAt: data.payment.expiresAtIso,
       pollingUrl: data.payment.pollingUrl,
-      instructions: `Send ${data.payment.expectedAmount} USDT on ${data.payment.network} to ${data.payment.receivingAddress}. Once broadcast, call checkOrderStatus with invoiceId "${data.invoiceId}".`,
+      instructions: `Send ${data.payment.expectedAmount} ${tokenCurrency} on ${data.payment.network} to ${data.payment.receivingAddress}. Once broadcast, call checkOrderStatus with invoiceId "${data.invoiceId}".`,
     }, null, 2);
   }
 
